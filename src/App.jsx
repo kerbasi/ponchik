@@ -1,9 +1,14 @@
-function App() {
+import { Main } from "./Pages/Main";
+import { Routes, Route } from "react-router-dom";
 
+function App() {
   return (
     <div className="App">
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
