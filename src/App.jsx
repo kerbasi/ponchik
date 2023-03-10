@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <div className="page">
       <Routes>
         <Route path="/" element={<Main />} />
       </Routes>
