@@ -1,3 +1,4 @@
+import { ButtonMenu } from "../Button1/ButtonMenu";
 import "./Card.sass";
 import photo from "./temp.jpg";
 
@@ -9,6 +10,7 @@ export const Card = () => {
         <span className="card__img-span">450 AMD</span>
       </div>
       <h4 className="card__title">Сет «Классический» (12 шт.)</h4>
+      <ButtonMenu lable='Добавить в корзину'/>
     </div>
   );
 };
