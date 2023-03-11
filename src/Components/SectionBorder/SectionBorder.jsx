@@ -2,6 +2,7 @@ import "./SectionBorder.sass";
 import firstImg from "../../assets/icons/border1.svg";
 import secondImg from "../../assets/icons/border2.svg";
 import thirdImg from "../../assets/icons/border3.svg";
+import { Button } from "../Button/Button";
 
 export const SectionBorder = ({ type }) => {
   if (type == "first") {
@@ -29,6 +30,7 @@ export const SectionBorder = ({ type }) => {
     return (
       <div className="sectionBorder second">
         <h3 className="sectionBorder__title">Посмотрите наше полное меню</h3>
+        <Button title='Смотреть меню' />
       </div>
     );
   } else {
@@ -37,6 +39,7 @@ export const SectionBorder = ({ type }) => {
         <h3 className="sectionBorder__title">
           Закажите пончики домой или в офис
         </h3>
+        <Button title='Смотреть меню' color='black'/>
       </div>
     );
   }
