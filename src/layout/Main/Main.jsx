@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
-import { AboutUs } from '../../pages/AboutUs';
-import { Contacts } from '../../pages/Contacts';
-import { Home } from '../../pages/Home';
-import { Menu } from '../../pages/Menu';
+import { AboutUs } from '../../Pages/AboutUs';
+import { Contacts } from '../../Pages/Contacts';
+import { Home } from '../../Pages/Home';
+import { Menu } from '../../Pages/Menu';
 
 export const Main = () => {
   return (
