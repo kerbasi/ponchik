@@ -7,7 +7,7 @@ export const Home = () => {
   return (
     <>
       <Hero />
-      <SectionBorder backgroundColor="#252525" />
+      <SectionBorder type='first' />
       <OftenOrdered />
       <SectionBorder type='second' />
       <AboutUsSection />
