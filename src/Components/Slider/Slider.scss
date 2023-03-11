@@ -3,42 +3,31 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 
     .imgContainer {
         max-width: 300px;
     }
   
-    .prev-button,
-    .next-button {
-      position: absolute;
-      transform: translateY(-50%);
-    }
-  
-    .prev-button {
-      left: 0;
-    }
-  
-    .next-button {
-      right: 0;
-    }
   }
 
 
   .dots-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    position: absolute;
+    bottom: 50px;
   
     .dot {
-      width: 10px;
-      height: 10px;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
-      margin: 0 10px;
+      margin: 0 13px;
       cursor: pointer;
-      background-color: lightgray;
+      background-color: rgba(248, 248, 248, 0.5);
   
       &.active {
-        background-color: darkgray;
+        background-color: #F8F8F8;
       }
     }
   }

@@ -25,7 +25,6 @@ const MySlider = () => {
 
   return (
     <div className="slider-container">
-      <button onClick={handlePrev} className="prev-button">Previous</button>
       {slides[currentSlide]}
       <div className="dots-container">
         {slides.map((_, index) => (
@@ -36,7 +35,6 @@ const MySlider = () => {
           />
         ))}
       </div>
-      <button onClick={handleNext} className="next-button">Next</button>
     </div>
   );
 };
