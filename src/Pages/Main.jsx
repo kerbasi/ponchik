@@ -1,9 +1,13 @@
-import { Footer } from "../Components/Footer/Footer"
+import { AboutUsSection } from "../Components/AboutUsSection/AboutUsSection";
+import { Footer } from "../Components/Footer/Footer";
 
 export const Main = () => {
-
-    return (
-        <Footer />
-    )
-    
-}
+  return (
+    <>
+      <main>
+        <AboutUsSection />
+      </main>
+      <Footer />
+    </>
+  );
+};
