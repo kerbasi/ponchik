@@ -1,11 +1,13 @@
-import { AboutUsSection } from '../Components/AboutUsSection/AboutUsSection';
-import { OftenOrdered } from '../Components/OftenOrdered/OftenOrdered';
-import { SectionBorder } from '../Components/SectionBorder/SectionBorder';
+import { AboutUsSection } from '../components/AboutUsSection/AboutUsSection';
+import { OftenOrdered } from '../components/OftenOrdered/OftenOrdered';
+import { SectionBorder } from '../components/SectionBorder/SectionBorder';
+import { Hero } from '../components/Hero/Hero'
 
 export const Home = () => {
   return (
     <>
-      <SectionBorder type='first' />
+      <Hero />
+      <SectionBorder backgroundColor="#252525" />
       <OftenOrdered />
       <SectionBorder type='second' />
       <AboutUsSection />

@@ -1,8 +1,9 @@
-import './Slider.scss'
+import './Slider.scss';
 
-import { useState } from "react";
+import { useEffect, useState } from 'react';
 
-const MySlider = () => {
+const MySlider = ({ data }) => {
+  const [slides, setSlides] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleNext = () => {
@@ -10,18 +11,27 @@ const MySlider = () => {
   };
 
   const handlePrev = () => {
-    setCurrentSlide(currentSlide - 1 < 0 ? slides.length - 1 : currentSlide - 1);
+    setCurrentSlide(
+      currentSlide - 1 < 0 ? slides.length - 1 : currentSlide - 1
+    );
   };
 
-  const handleDotClick = index => {
+  const handleDotClick = (index) => {
     setCurrentSlide(index);
   };
 
-  const slides = [
-    <img className='imgContainer' key="slide-1" src='https://img1.akspic.ru/previews/0/9/1/1/7/171190/171190-nacionalnyj_park_kaziranga-atmosfera-mir-prirodnyj_landshaft-purpur-550x310.jpg'/>,
-    <img className='imgContainer' key="slide-2" src='https://kartinkin.net/pics/uploads/posts/2022-08/1660477371_1-kartinkin-net-p-minimalistichnie-oboi-krasivo-1.jpg'/>,
-    <img className='imgContainer' key="slide-3" src='https://zastavok.net/ts/graphics/163052275128.jpg'/>
-  ];
+  // Создание массива слайдов из переданных пропсов в компонент MySlider
+  useEffect(() => {
+    let slidesArray = [];
+    if (data && data.length !== 0) {
+      data.map((item) =>
+        slidesArray.push(
+          <img className="imgContainer" key={item.id} src={item.image} />
+        )
+      );
+      setSlides(slidesArray);
+    }
+  }, [data]);
 
   return (
     <div className="slider-container">
@@ -30,7 +40,7 @@ const MySlider = () => {
         {slides.map((_, index) => (
           <div
             key={index}
-            className={`dot ${index === currentSlide ? "active" : ""}`}
+            className={`dot ${index === currentSlide ? 'active' : ''}`}
             onClick={() => handleDotClick(index)}
           />
         ))}
