@@ -1,6 +1,6 @@
 import "./Footer.sass";
 import logo from "../../assets/logo.png";
-import { Navigation } from "../../components/Navigation/Navigation";
+import { Navigation } from "../../components/Navigation/Navigation.jsx";
 import inst from "../../assets/inst.png";
 import tlg from "../../assets/tlg.png";
 import wa from "../../assets/wa.png";

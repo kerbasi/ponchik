@@ -1,5 +1,5 @@
 import './Header.sass';
-import { Navigation } from '../../components/Navigation/Navigation';
+import { Navigation } from '../../components/Navigation/Navigation.jsx';
 import logo from '../../assets/logo.svg';
 import { NavLink } from 'react-router-dom';
 import { Select } from '../../components/Select/Select';
