@@ -1,12 +1,13 @@
-import { Main } from "./Pages/Main";
-import { Routes, Route } from "react-router-dom";
+import { Header } from './layout/Header/Header';
+import { Main } from './layout/Main/Main';
+import { Footer } from './layout/Footer/Footer';
 
 function App() {
   return (
     <div className="page">
-      <Routes>
-        <Route path="/" element={<Main />} />
-      </Routes>
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
