@@ -1,4 +1,4 @@
-import { ButtonMenu } from "../Button1/ButtonMenu";
+import { ButtonMenu } from "../Button/ButtonMenu";
 import "./Card.sass";
 import photo from "./temp.jpg";
 
