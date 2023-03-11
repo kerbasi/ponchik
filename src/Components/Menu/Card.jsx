@@ -1,11 +1,14 @@
-import './Card.sass'
-import photo from './temp.jpg'
+import "./Card.sass";
+import photo from "./temp.jpg";
 
 export const Card = () => {
-    return(
-        <div className="card">
-            <img src={photo} alt="" className="card__img" />
-            <h4 className="card__title">Сет «Классический»  (12 шт.)</h4>
-        </div>
-    )
-}
+  return (
+    <div className="card">
+      <div className="card__img">
+        <img src={photo} alt="" className="card__img-container" />
+        <span className="card__img-span">450 AMD</span>
+      </div>
+      <h4 className="card__title">Сет «Классический» (12 шт.)</h4>
+    </div>
+  );
+};
