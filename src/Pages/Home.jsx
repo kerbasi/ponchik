@@ -1,7 +1,7 @@
-import { AboutUsSection } from '../components/AboutUsSection/AboutUsSection';
-import { OftenOrdered } from '../components/OftenOrdered/OftenOrdered';
-import { SectionBorder } from '../components/SectionBorder/SectionBorder';
-import { Hero } from '../components/Hero/Hero'
+import { AboutUsSection } from '../Components/AboutUsSection/AboutUsSection';
+import { OftenOrdered } from '../Components/OftenOrdered/OftenOrdered';
+import { SectionBorder } from '../Components/SectionBorder/SectionBorder';
+import { Hero } from '../Components/Hero/Hero'
 
 export const Home = () => {
   return (
