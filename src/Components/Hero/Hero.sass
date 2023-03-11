@@ -1,8 +1,32 @@
-
+@import '../../Styles/@mixins'
 
 .hero
     height: 800px
     position: relative
+
+.hero__content
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    z-index: 1
+    align-items: center
+
+.hero__title
+    @include heading-H1-web
+    margin: 270px 0 15px
+
+.hero__subtitle
+    @include heading-H3-web
+    max-width: 656px
+    text-align: center
+
+.hero__btn-container
+    margin-top: 35px
+    display: flex
+    gap: 41px
 
 
 

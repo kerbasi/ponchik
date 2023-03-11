@@ -1,5 +1,5 @@
 export const Contacts = () => {
     return(
-        <div>Контакты</div>
+        <div style={{flexShrink: 1}}>Контакты</div>
     )
 }
