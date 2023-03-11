@@ -5,11 +5,12 @@ import { SectionBorder } from '../components/SectionBorder/SectionBorder';
 export const Home = () => {
   return (
     <>
-      <SectionBorder backgroundColor="#252525" />
+      <SectionBorder type='first' />
       <OftenOrdered />
-      <SectionBorder backgroundColor="#252525" />
+      <SectionBorder type='second' />
       <AboutUsSection />
-      <SectionBorder backgroundColor="#F3EBE6" />
+      <SectionBorder type='third' />
     </>
   );
 };
+ 

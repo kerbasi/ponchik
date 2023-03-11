@@ -1,2 +1,28 @@
-.sectionBorder
+@import '../../Styles/@mixins'
+.first
     min-height: 80px
+    display: flex
+    justify-content: space-between
+    padding: 0 268px
+
+.sectionBorder__block
+    display: flex
+    align-items: center
+    max-width: 250px
+.second
+    display: flex
+    min-height: 112px
+    color: #F8F8F8
+    justify-content: center
+    align-items: center
+
+.third
+    display: flex
+    min-height: 112px
+    background-color: #F3EBE6
+    color: #010001
+    justify-content: center
+    align-items: center
+
+.sectionBorder__title
+    @include heading-H3-web
