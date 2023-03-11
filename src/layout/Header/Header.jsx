@@ -2,7 +2,7 @@ import './Header.sass';
 import { Navigation } from '../../Components/Navigation/Navigation.jsx';
 import logo from '../../assets/logo.svg';
 import { NavLink } from 'react-router-dom';
-import { Select } from '../../components/Select/Select';
+import { Select } from '../../Components/Select/Select';
 
 export const Header = () => {
   return (
