@@ -1,0 +1,21 @@
+@import '../../Styles/@mixins'
+
+.reviews
+    min-height: 800px
+    width: 100%
+    background-image: url('../../assets/images/reviews-back.jpg')
+    display: flex
+    flex-direction: column
+    gap: 50px
+    align-items: center
+    position: relative
+    overflow: hidden
+
+.reviews__title
+    @include heading-H2-web
+    margin: 130px 0 0
+
+.reviews__cards
+    display: flex
+    gap: 35px
+    margin: 0 -23px

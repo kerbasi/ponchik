@@ -1,0 +1,30 @@
+@import '../../Styles/@mixins'
+
+.review
+    width: 345px
+    min-height: 422px
+    width: 100%
+    background: linear-gradient(324.48deg, rgba(248, 248, 248, 0.3) 0.53%, rgba(248, 248, 248, 0.1) 99.47%)
+    border: 2px solid #F8F8F8
+    display: flex
+    flex-direction: column
+    padding: 45px 40px
+    box-sizing: border-box
+    gap: 15px
+
+.review__image
+    width: 80px
+    height: 80px
+    border-radius: 50%
+    margin: 0 auto
+
+.review__name
+    @include text-medium
+    text-align: center
+
+.review__text
+    font-family: 'PT Sans'
+    font-style: normal
+    font-weight: 400
+    font-size: 18px
+    line-height: 120%
