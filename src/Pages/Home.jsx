@@ -2,7 +2,7 @@ import { AboutUsSection } from '../Components/AboutUsSection/AboutUsSection';
 import { OftenOrdered } from '../Components/OftenOrdered/OftenOrdered';
 import { SectionBorder } from '../Components/SectionBorder/SectionBorder';
 import { Hero } from '../Components/Hero/Hero';
-import { Reviews } from '../components/Reviews/Reviews';
+import { Reviews } from '../Components/Reviews/Reviews';
 
 export const Home = () => {
   return (
