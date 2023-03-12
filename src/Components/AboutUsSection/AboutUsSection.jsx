@@ -1,3 +1,4 @@
+import { Button } from "../Button/Button";
 import "./AboutUsSection.sass";
 
 export const AboutUsSection = () => {
@@ -14,6 +15,8 @@ export const AboutUsSection = () => {
       sheets containing Lorem Ipsum passages, and more recently with desktop
       publishing software like Aldus PageMaker including versions of Lorem Ipsum
     </p>
+    <Button title='Подробнее' />
   </section>
   )
 };
+ 
