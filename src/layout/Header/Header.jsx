@@ -7,6 +7,7 @@ import { Select } from '../../Components/Select/Select';
 export const Header = () => {
   return (
     <header className="header">
+      <div className="header__container">
       <NavLink to="/" className="header__logo-nav">
         <img src={logo} alt="Логотип" />
       </NavLink>
@@ -18,6 +19,7 @@ export const Header = () => {
           className="header__cart"
           onClick={() => alert('Переход в корзину')}
         />
+      </div>
       </div>
     </header>
   );
