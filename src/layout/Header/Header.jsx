@@ -10,9 +10,8 @@ export const Header = () => {
       <NavLink to="/" className="header__logo-nav">
         <img src={logo} alt="Логотип" />
       </NavLink>
-      <div className="header__nav-container">
         <Navigation />
-      </div>
+
       <div className="header__icons">
         <Select />
         <button
