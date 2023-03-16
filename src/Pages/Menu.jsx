@@ -6,8 +6,7 @@ export const Menu = () => {
   return (
     <>
       <HeroMenu />
-      <Tempblock />
-      {/* <Routes>
+      <Routes>
         <Route index element={<Tempblock />} />
         <Route
           exact path="pies" element={<Tempblock />}
@@ -15,7 +14,7 @@ export const Menu = () => {
         <Route path="hot-drinks" element={<Tempblock />} />
         <Route path="cold-drinks" element={<Tempblock />} />
         <Route path="freshes" element={<Tempblock />} />
-      </Routes> */}
+      </Routes>
     </>
   );
 };
