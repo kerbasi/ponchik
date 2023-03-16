@@ -5,7 +5,7 @@ export const Navigation = () => {
   return (
     <nav className="nav">
       <NavLink
-        to="/menu"
+        to="/menu/donuts"
         className={({ isActive }) =>
           isActive ? 'nav__link nav__link_active' : 'nav__link'
         }

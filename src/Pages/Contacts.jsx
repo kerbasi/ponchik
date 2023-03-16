@@ -1,5 +1,7 @@
+import { Tempblock } from '../components/Tempblock/Tempblock'
+
 export const Contacts = () => {
     return(
-        <div style={{flexShrink: 1}}>Контакты</div>
+        <Tempblock />
     )
 }

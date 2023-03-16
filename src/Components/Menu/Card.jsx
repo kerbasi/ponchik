@@ -2,14 +2,23 @@ import { ButtonMenu } from "../Button/ButtonMenu";
 import "./Card.sass";
 import photo from "./temp.jpg";
 
-export const Card = () => {
+const TEMP_DATA = {
+  image: photo,
+  price: 450,
+  title: 'Сет «Классический» (12 шт.)'
+}
+
+export const Card = ({data = TEMP_DATA, type = 'white'}) => {
+
+  const {price, image, title} = data;
+
   return (
     <div className="card">
       <div className="card__img">
-        <img src={photo} alt="" className="card__img-container" />
-        <span className="card__img-span">450 AMD</span>
+        <img src={image} alt={title} className="card__img-container" />
+        <span className={`card__img-span ${type === 'black' ? `card__img-span_type_black` : ''}`}>{`${price} AMD`}</span>
       </div>
-      <h4 className="card__title">Сет «Классический» (12 шт.)</h4>
+      <h4 className="card__title">{title}</h4>
       <ButtonMenu lable='Добавить в корзину'/>
     </div>
   );
