@@ -12,7 +12,7 @@ export const SectionBorder = ({ type }) => {
           <div className="sectionBorder__block">
             <img className="sectionBorder__img" src={firstImg} />
             <p className="sectionBorder__description">
-              пончики по особому семейному рецепту
+              пончики по-особому семейному рецепту
             </p>
           </div>
           <div className="sectionBorder__block">
