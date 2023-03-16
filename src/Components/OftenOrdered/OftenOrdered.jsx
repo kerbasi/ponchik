@@ -7,9 +7,9 @@ export const OftenOrdered = () => {
     <section className="oftenOrdered">
       <h2 className="oftenOrdered__title">Чаще всего заказывают</h2>
       <div className="ofterOrdered__cards">
-        <Card />
-        <Card />
-        <Card />
+        <Card set={true} />
+        <Card set={true} />
+        <Card set={true} />
       </div>
     </section>
   );

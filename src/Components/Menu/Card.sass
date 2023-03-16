@@ -8,6 +8,10 @@
 .card__img
     position: relative
 
+.card__img:hover .card__description
+    cursor: pointer
+    display: block
+
 .card__img-span
     position: absolute
     bottom: 10px
@@ -16,4 +20,15 @@
 
 .card__img-span_type_black
     color: black
+
+.card__description
+    position: absolute
+    bottom: 0
+    background-color: rgba(255, 255, 255, 0.2)
+    z-index: 2
+    display: none
+    @include heading-H4-web
+    padding: 20px
+    height: 40%
+    width: 100%
 
