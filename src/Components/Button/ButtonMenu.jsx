@@ -16,7 +16,7 @@ export const ButtonMenu = ({ lable }) => {
     <div className="buttonMenu">
       {count >= 1 ? (
         <div className="buttonMenu__buttons">
-          <button className="buttonMenu__increase" onClick={removeFromCart}>-</button>
+          <button className="buttonMenu__decrease" onClick={removeFromCart}>-</button>
           <p className="buttonMenu__count">{count}</p>
           <button className="buttonMenu__increase" onClick={addToCart}>+</button>
         </div>
