@@ -17,7 +17,7 @@ export const Card = ({ data, type = 'white', set = false }) => {
         {set && descriptions && (
           <ul div className="card__description">
             {descriptions.map((item) => (
-              <li key={item.id}>{item.text}</li>
+              <li key={item.id} className='card__img-description'>{item.text}</li>
             ))}
           </ul>
         )}
