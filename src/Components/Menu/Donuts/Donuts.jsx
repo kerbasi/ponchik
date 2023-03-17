@@ -1,20 +1,24 @@
 import './Donuts.sass';
 import { DONUTS } from '../../../data/donuts/donuts';
-import { Card } from '../Card';
+import { Sets } from '../Sets/Sets';
+import { List } from '../List/List';
+
+const options = {
+  type: 'white',
+  set: 'false',
+  items: DONUTS,
+};
 
 export const Donuts = () => {
   return (
-    <section className="donuts">
-      <div className='donuts__container'>
-        <h2 className="donuts__title">Пончики</h2>
-        <ul className="donuts__list">
-          {DONUTS.map((item) => (
-            <li key={item.id}>
-              <Card data={item} type='black' />
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+    <>
+      <section className="donuts">
+        <div className="donuts__container">
+          <h2 className="donuts__title">Пончики</h2>
+          <List options={options} />
+        </div>
+      </section>
+      <Sets />
+    </>
   );
 };

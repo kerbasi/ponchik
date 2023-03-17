@@ -1,15 +1,8 @@
 import { ButtonMenu } from '../Button/ButtonMenu';
 import './Card.sass';
-import photo from './temp.jpg';
 
-const TEMP_DATA = {
-  image: photo,
-  price: 450,
-  title: 'Сет «Классический» (12 шт.)',
-};
-
-export const Card = ({ data = TEMP_DATA, type = 'white', set = false }) => {
-  const { price, image, title } = data;
+export const Card = ({ data, type = 'white', set = false }) => {
+  const { price, image, title, descriptions } = data;
 
   return (
     <div className="card">
@@ -21,12 +14,11 @@ export const Card = ({ data = TEMP_DATA, type = 'white', set = false }) => {
           }`}
         >{`${price} AMD`}</span>
 
-        {set && (
+        {set && descriptions && (
           <ul div className="card__description">
-            <li>С шоколадом 3 шт.</li>
-            <li>С шоколадом 3 шт.</li>
-            <li>С шоколадом 3 шт.</li>
-            <li>С шоколадом 3 шт.</li>
+            {descriptions.map((item) => (
+              <li key={item.id}>{item.text}</li>
+            ))}
           </ul>
         )}
       </div>
