@@ -1,12 +1,30 @@
-import './ButtonMenu.sass'
+import { useState } from "react";
+import "./ButtonMenu.sass";
 
+export const ButtonMenu = ({ lable }) => {
+  const [count, setCount] = useState(0);
 
-export const ButtonMenu = ({lable}) => {
+  const addToCart = () => {
+    setCount((prev) => prev + 1);
+  };
 
-    return(
-        <div className="buttonMenu">
-            <button className="buttonMenu__button">{lable}</button>
+  const removeFromCart = () => {
+    setCount((prev) => prev - 1);
+  }
+
+  return (
+    <div className="buttonMenu">
+      {count >= 1 ? (
+        <div className="buttonMenu__buttons">
+          <button className="buttonMenu__increase" onClick={removeFromCart}>-</button>
+          <p className="buttonMenu__count">{count}</p>
+          <button className="buttonMenu__increase" onClick={addToCart}>+</button>
         </div>
-    )
-
-}
+      ) : (
+        <button className="buttonMenu__button" onClick={addToCart}>
+          {lable}
+        </button>
+      )}
+    </div>
+  );
+};
