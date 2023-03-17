@@ -1,8 +1,8 @@
-import { HeroMenu } from '../components/HeroMenu/HeroMenu';
+import { HeroMenu } from '../Components/HeroMenu/HeroMenu';
 import { Route, Routes } from 'react-router-dom';
-import { Tempblock } from '../components/Tempblock/Tempblock';
-import { NavBar } from '../components/Menu/NavBar/NavBar';
-import { Donuts } from '../components/Menu/Donuts/Donuts';
+import { Tempblock } from '../Components/Tempblock/Tempblock';
+import { NavBar } from '../Components/Menu/NavBar/NavBar';
+import { Donuts } from '../Components/Menu/Donuts/Donuts';
 
 export const Menu = () => {
   return (

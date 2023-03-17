@@ -1,4 +1,4 @@
-import { Tempblock } from '../components/Tempblock/Tempblock'
+import { Tempblock } from '../Components/Tempblock/Tempblock'
 
 export const Contacts = () => {
     return(
