@@ -12,15 +12,135 @@ export const HOT_DRINKS = [
   {
     id: 'hot-drink-1',
     image: hotdrinks_1,
-    title: 'Пирожок с картошкой',
+    title: 'Американо',
     sizes: [
       {
         size: 'L',
-        price: 200,
+        price: 300,
       },
       {
         size: 'XL',
+        price: 500,
+      },
+    ],
+  },
+  {
+    id: 'hot-drink-2',
+    image: hotdrinks_2,
+    title: 'Ориентал/черный кофе',
+    sizes: [
+      {
+        size: 'L',
         price: 300,
+      },
+      {
+        size: 'XL',
+        price: 500,
+      },
+    ],
+  },
+  {
+    id: 'hot-drink-3',
+    image: hotdrinks_3,
+    title: 'Маккофе',
+    sizes: [
+      {
+        size: 'L',
+        price: 300,
+      },
+      {
+        size: 'XL',
+        price: 500,
+      },
+    ],
+  },
+  {
+    id: 'hot-drink-4',
+    image: hotdrinks_4,
+    title: 'Эспрессо',
+    sizes: [
+      {
+        size: 'L',
+        price: 300,
+      },
+      {
+        size: 'XL',
+        price: 500,
+      },
+    ],
+  },
+  {
+    id: 'hot-drink-5',
+    image: hotdrinks_5,
+    title: 'Чай',
+    sizes: [
+      {
+        size: 'L',
+        price: 300,
+      },
+      {
+        size: 'XL',
+        price: 500,
+      },
+    ],
+  },
+  {
+    id: 'hot-drink-6',
+    image: hotdrinks_6,
+    title: 'Латте',
+    sizes: [
+      {
+        size: 'L',
+        price: 300,
+      },
+      {
+        size: 'XL',
+        price: 500,
+      },
+    ],
+  },
+  {
+    id: 'hot-drink-7',
+    image: hotdrinks_7,
+    title: 'Кофе с Nutella',
+    sizes: [
+      {
+        size: 'L',
+        price: 300,
+      },
+      {
+        size: 'XL',
+        price: 500,
+      },
+    ],
+  },
+  {
+    id: 'hot-drink-8',
+    image: hotdrinks_8,
+    title: 'Нескафе',
+    sizes: [
+      {
+        size: 'L',
+        price: 300,
+      },
+      {
+        size: 'XL',
+        price: 500,
+      },
+    ],
+  },
+  {
+    id: 'hot-drink-9',
+    image: hotdrinks_9,
+    title: 'Капучино',
+    sizes: [
+      {
+        size: 'L',
+        price: 300,
+      },
+      {
+        size: 'XL',
+        price: 500,
       },
     ],
   },

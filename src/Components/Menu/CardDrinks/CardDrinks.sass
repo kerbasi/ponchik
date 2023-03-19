@@ -1,0 +1,43 @@
+@import '../../../Styles/@mixins'
+
+.card-drinks
+    max-width: 350px
+    box-sizing: border-box
+
+.card-drinks__title
+    @include heading-H4-web
+    color: #252525
+    padding: 20px 0 30px
+
+.card-drinks__img
+    position: relative
+
+.card-drinks__img-span
+    position: absolute
+    bottom: 10px
+    right: 15px
+    color: white
+
+.card-drinks__img-span_type_black
+    color: black
+
+.card-drinks__sizes
+    position: absolute
+    top: 10px
+    right: 15px
+    display: flex
+    gap: 10px
+
+.card-drinks__size-btn
+    border: 1px solid #252525
+    width: 40px
+    height: 42px
+    color: #F8F8F8
+
+.card-drinks__size-btn:hover
+    cursor: pointer
+
+.card-drinks__size-btn_type_inactive
+    background: #252525
+
+
