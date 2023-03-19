@@ -14,7 +14,7 @@ export const Pies = () => {
     <>
       <section className="pies">
         <div className="pies__container">
-          <h2 className="pies__title">Пончики</h2>
+          <h2 className="pies__title">Пирожки</h2>
           <List options={options} />
         </div>
       </section>

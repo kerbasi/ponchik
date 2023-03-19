@@ -5,6 +5,7 @@ import { NavBar } from '../Components/Menu/NavBar/NavBar';
 import { Donuts } from '../Components/Menu/Donuts/Donuts';
 import { Pies } from '../Components/Menu/Pies/Pies';
 import { HotDrinks } from '../Components/Menu/HotDrinks/HotDrinks'
+import { ColdDrinks } from '../Components/Menu/ColdDrinks/ColdDrinks';
 
 export const Menu = () => {
   return (
@@ -17,7 +18,7 @@ export const Menu = () => {
           exact path="pies" element={<Pies />}
         />
         <Route exact path="hot-drinks" element={<HotDrinks  />} />
-        <Route exact path="cold-drinks" element={<Tempblock />} />
+        <Route exact path="cold-drinks" element={<ColdDrinks />} />
         <Route exact path="fresh" element={<Tempblock />} />
       </Routes>
     </>
