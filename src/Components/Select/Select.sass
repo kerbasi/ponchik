@@ -1,7 +1,25 @@
 @import '../../Styles/@mixins'
 
 .select
+    font: inherit
+    letter-spacing: inherit
+    word-spacing: inherit
+    -moz-appearance: none
+    -webkit-appearance: none
+    appearance: none
+
     background: none
     border: none
     color: white
     @include text-medium
+
+.select:not([multiple])
+    padding-right: 1.2em
+    background-repeat: no-repeat
+    background-position: calc(100% - 0.1em) 0.6em
+    background-size: 0.85em auto
+    background-image: url("../../assets/icons/select-arrow.svg")
+
+/* скроет иконку стрелки в IE */
+.select::-ms-expand
+    display: none
