@@ -1,5 +1,5 @@
 import './Reviews.sass';
-import { ReviewCard } from '../ReviewCard/ReviewCard';
+import { ReviewCard } from './ReviewCard/ReviewCard';
 import { REVIEWS_DATA } from '../../data/reviews/reviews';
 
 export const Reviews = () => {

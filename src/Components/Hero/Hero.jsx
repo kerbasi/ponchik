@@ -9,7 +9,7 @@ export const Hero = () => {
 
   return (
     <section className="hero">
-      <MySlider data={HERO_SLIDES} />
+      <MySlider data={HERO_SLIDES} navigation/>
       <div className='hero__content'>
         <h1 className='hero__title'>The Ponchik</h1>
         <p className='hero__subtitle'>Каждый укус - это райское наслаждение. Попробуйте наши пончики сегодня!</p>

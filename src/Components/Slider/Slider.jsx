@@ -1,26 +1,16 @@
-import './Slider.scss';
+import "./Slider.scss";
+import { useEffect, useState } from "react";
 
-import { useEffect, useState } from 'react';
-
-const MySlider = ({ data }) => {
+const MySlider = ({ data, navigation }) => {
   const [slides, setSlides] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  const handleNext = () => {
-    setCurrentSlide(currentSlide + 1 >= slides.length ? 0 : currentSlide + 1);
-  };
-
-  const handlePrev = () => {
-    setCurrentSlide(
-      currentSlide - 1 < 0 ? slides.length - 1 : currentSlide - 1
-    );
-  };
+  const [touchStartX, setTouchStartX] = useState(null);
+  const [touchEndX, setTouchEndX] = useState(null);
 
   const handleDotClick = (index) => {
     setCurrentSlide(index);
   };
 
-  // Создание массива слайдов из переданных пропсов в компонент MySlider
   useEffect(() => {
     let slidesArray = [];
     if (data && data.length !== 0) {
@@ -33,18 +23,52 @@ const MySlider = ({ data }) => {
     }
   }, [data]);
 
-  return (
-    <div className="slider-container">
-      {slides[currentSlide]}
+  const handleTouchStart = (event) => {
+    console.log(event.touches);
+    setTouchStartX(event.touches[0].clientX);
+  };
+
+  const handleTouchMove = (event) => {
+    setTouchEndX(event.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX && touchEndX) {
+      const swipeLength = touchEndX - touchStartX;
+      if (swipeLength > 50 && currentSlide > 0) {
+        setCurrentSlide(currentSlide - 1);
+      } else if (swipeLength < -50 && currentSlide < slides.length - 1) {
+        setCurrentSlide(currentSlide + 1);
+      }
+      setTouchStartX(null);
+      setTouchEndX(null);
+    }
+  };
+
+  const useDots = () => {
+    return (
       <div className="dots-container">
         {slides.map((_, index) => (
           <div
             key={index}
-            className={`dot ${index === currentSlide ? 'active' : ''}`}
+            className={`dot ${index === currentSlide ? "active" : ""}`}
             onClick={() => handleDotClick(index)}
           />
         ))}
       </div>
+    )
+  }
+
+  return (
+    <div
+      className="slider-container"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+      {slides[currentSlide]}
+
+    {navigation && useDots()}
     </div>
   );
 };
