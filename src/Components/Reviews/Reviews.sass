@@ -21,10 +21,13 @@
 
 .reviews__cards
     display: flex
-    justify-content: space-between
+    justify-content: space-evenly
     margin: 0 40px
     max-width: 1440px
     width: 100%
+    flex-wrap: wrap
+    column-gap: 20px
+    row-gap: 40px
 
 @media screen and ('max-width: 870px')
     .reviews__title
