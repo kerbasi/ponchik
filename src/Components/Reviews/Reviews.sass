@@ -21,15 +21,34 @@
     margin: 130px 0 0
 
 .reviews__cards
-    display: flex
-    justify-content: space-evenly
+    
     margin: 0 40px
     max-width: 1440px
     width: 100%
-    flex-wrap: wrap
-    column-gap: 20px
-    row-gap: 40px
 
+.swiper 
+    width: 100%
+    height: 100%
+
+
+.swiper-slide 
+    text-align: center
+    font-size: 18px
+    background: #fff
+
+    
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+.swiper-slide img 
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+ 
+   
 @media screen and ('max-width: 870px')
     .reviews__title
         @include heading-H2-mob
