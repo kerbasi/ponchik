@@ -23,7 +23,6 @@ export const Header = () => {
             onClick={() => alert("Переход в корзину")}
           />
         </div>
-
         <Burger />
       </div>
     </header>
