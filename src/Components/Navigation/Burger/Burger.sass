@@ -1,0 +1,46 @@
+﻿.burger-nav__btn
+    width: 30px
+    height: 16px
+    margin-left: 20px
+    position: relative
+    z-index: 20000
+    color: white
+    transition: all 0.3s 
+
+.burger-nav__btn span 
+    position: absolute
+    top: 7px
+    width: 30px
+    height: 2px
+    background-color: #fff
+
+.burger-nav__btn:before
+    content: ""
+    position: absolute
+    top: 0
+    width: 30px
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+
+
+.burger-nav__btn:after
+    content: ""
+    position: absolute
+    bottom: 0
+    width: 30px
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+
+.burger-nav__btn_active span 
+    height: 0
+
+.burger-nav__btn_active:before
+    transform: rotate(45deg)
+    top: 7px 
+
+
+.burger-nav__btn_active:after
+    transform: rotate(-45deg)
+    bottom: 7px

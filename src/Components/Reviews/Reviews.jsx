@@ -16,12 +16,9 @@ export const Reviews = () => {
   return (
     <section className='reviews'>
       <h2 className='reviews__title'>Отзывы</h2>
-      {/* <div className='reviews__cards'> */}
       <Swiper
         grabCursor={true}
         centeredSlides={true}
-        // loop={true}
-        // spaceBetween={180}
         slidesPerView={1}
         navigation={{
           nextEl: ".swiper-button-next",
@@ -30,16 +27,13 @@ export const Reviews = () => {
         }}
         modules={[Navigation]}
         className='swiper_container'
-        // autoHeight={true}
         rewind={true}
         breakpoints={{
-          // when window width is >= 480px
           950: {
             slidesPerView: 2,
             spaceBetween: 200,
             centeredSlides: false,
           },
-          // when window width is >= 640px
           1460: {
             slidesPerView: 3,
             spaceBetween: 180,
@@ -48,10 +42,8 @@ export const Reviews = () => {
         }}
       >
         {REVIEWS_DATA.map((item) => (
-          <SwiperSlide>
-            <span slot='wrapper-end'>
-              <ReviewCard key={item.id} review={item} />
-            </span>
+          <SwiperSlide key={item.id}>
+            <ReviewCard review={item} />
           </SwiperSlide>
         ))}
 
