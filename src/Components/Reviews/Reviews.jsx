@@ -9,10 +9,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 
 export const Reviews = () => {
   return (
@@ -25,13 +23,12 @@ export const Reviews = () => {
         // loop={true}
         // spaceBetween={180}
         slidesPerView={1}
-        pagination={{ el: ".swiper-pagination", clickable: true }}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
           clickable: true,
         }}
-        modules={[Pagination, Navigation]}
+        modules={[Navigation]}
         className='swiper_container'
         // autoHeight={true}
         rewind={true}

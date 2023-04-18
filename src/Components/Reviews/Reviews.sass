@@ -39,7 +39,6 @@
    .swiper 
         max-width: 345px
 
-
 .swiper_container 
     height: 500px
     padding: 2rem 0
@@ -87,3 +86,13 @@
 @media screen and ('max-width: 870px')
     .reviews__title
         @include heading-H2-mob
+
+@media (max-width: 950px)         
+    .slider-controler .swiper-button-prev 
+        left: 20% !important
+        transform: translateX(-20%) !important
+
+@media (max-width: 950px)   
+    .slider-controler .swiper-button-next 
+        left: 80% !important
+        transform: translateX(-80%) !important
