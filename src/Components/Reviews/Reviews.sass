@@ -1,7 +1,7 @@
 @import '../../Styles/@mixins'
 
 .reviews
-
+    max-width: 100%
     min-height: 800px
     width: 100%
     background-image: url('../../assets/images/reviews-back.jpg')
@@ -14,7 +14,7 @@
     overflow: hidden
     background-repeat: no-repeat
     background-size: cover
-    padding-bottom: 150px
+    padding-bottom: 70px
 
 .reviews__title
     @include heading-H2-web
@@ -22,33 +22,68 @@
 
 .reviews__cards
     
-    margin: 0 40px
+    margin: auto 40px
     max-width: 1440px
     width: 100%
 
 .swiper 
     width: 100%
     height: 100%
+    max-width: 1440px
+
+@media (max-width: 1460px) 
+   .swiper 
+        max-width: 900px
+
+@media (max-width: 950px) 
+   .swiper 
+        max-width: 345px
 
 
-.swiper-slide 
-    text-align: center
-    font-size: 18px
-    background: #fff
+.swiper_container 
+    height: 500px
+    padding: 2rem 0
+    position: relative
 
-    
+
+.slider-controler 
+    position: relative
+    bottom: 2rem
     display: flex
-    justify-content: center
     align-items: center
+    justify-content: center
 
 
-.swiper-slide img 
-    display: block
-    width: 100%
-    height: 100%
-    object-fit: cover
- 
-   
+.slider-controler .swiper-button-next 
+    left: 58% !important
+    transform: translateX(-58%) !important
+
+
+  
+.slider-controler .slider-arrow 
+    background: var(--white)
+    width: 3.5rem
+    height: 3.5rem
+    border-radius: 50%
+    left: 42%
+    transform: translateX(-42%)
+    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1))
+
+.slider-controler .slider-arrow ion-icon 
+    font-size: 2rem
+    color: #222224
+
+.swiper-pagination 
+    position: relative
+    width: 15rem !important
+    bottom: 1rem
+
+.swiper-pagination .swiper-pagination-bullet 
+    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1))
+
+.swiper-pagination .swiper-pagination-bullet-active 
+    background: var(--primary)
+
 @media screen and ('max-width: 870px')
     .reviews__title
         @include heading-H2-mob
