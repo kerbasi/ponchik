@@ -1,11 +1,18 @@
 import "./Header.sass";
 import { Navigation } from "../../Components/Navigation/Navigation.jsx";
-import { Burger } from "../../Components/Navigation/Burger/Burger";
+import { Burger } from "../../Components/Burger/Burger";
 import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
 import { Select } from "../../Components/Select/Select";
+import { useState } from "react";
+import useMediaQuery from "../../utils/hooks/useMediaQuery";
 
 export const Header = () => {
+  const [isBurgerActive, setIsBurgerActive] = useState(false);
+
+  const isTablet = useMediaQuery("(max-width: 950px)");
+  const isMobile = useMediaQuery("(max-width: 650px)");
+
   return (
     <header className='header'>
       <div className='header__container'>
@@ -23,7 +30,8 @@ export const Header = () => {
             onClick={() => alert("Переход в корзину")}
           />
         </div>
-        <Burger />
+        {isTablet && <Burger />}
+        {isMobile && <Burger mobile={true} />}
       </div>
     </header>
   );
