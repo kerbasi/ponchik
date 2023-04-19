@@ -13,6 +13,10 @@ export const Header = () => {
   const isTablet = useMediaQuery("(max-width: 950px)");
   const isMobile = useMediaQuery("(max-width: 650px)");
 
+  const handleBurgerBtnClick = () => {
+    setIsBurgerActive((prev) => !prev);
+  };
+
   return (
     <header className='header'>
       <div className='header__container'>
@@ -30,8 +34,19 @@ export const Header = () => {
             onClick={() => alert("Переход в корзину")}
           />
         </div>
-        {isTablet && <Burger />}
-        {isMobile && <Burger mobile={true} />}
+        {isTablet && (
+          <Burger
+            handleBurgerBtnClick={handleBurgerBtnClick}
+            isBurgerActive={isBurgerActive}
+          />
+        )}
+        {isMobile && (
+          <Burger
+            handleBurgerBtnClick={handleBurgerBtnClick}
+            isBurgerActive={isBurgerActive}
+            isMobile={isMobile}
+          />
+        )}
       </div>
     </header>
   );

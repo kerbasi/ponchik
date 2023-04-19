@@ -2,19 +2,16 @@
 import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
 import { useState } from "react";
 
-export const Burger = () => {
-  const [isActive, setIsActive] = useState(true);
-  const className = isActive
+export const Burger = ({ handleBurgerBtnClick, isBurgerActive, isMobile }) => {
+  const className = isBurgerActive
     ? "burger-nav__btn burger-nav__btn_active"
     : "burger-nav__btn";
-  const handleBtnClick = () => {
-    setIsActive(!isActive);
-  };
+
   return (
     <>
-      <div className={className} onClick={handleBtnClick}>
+      <div className={className} onClick={handleBurgerBtnClick}>
         <span />
-        <BurgerMenu isActive={isActive} />
+        <BurgerMenu isActive={isBurgerActive} />
       </div>
     </>
   );
