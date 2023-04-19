@@ -1,8 +1,6 @@
 ﻿import "./Burger.sass";
-import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
-import { useState } from "react";
 
-export const Burger = ({ handleBurgerBtnClick, isBurgerActive, isMobile }) => {
+export const Burger = ({ handleBurgerBtnClick, isBurgerActive }) => {
   return (
     <>
       <div
@@ -12,7 +10,6 @@ export const Burger = ({ handleBurgerBtnClick, isBurgerActive, isMobile }) => {
         onClick={handleBurgerBtnClick}
       >
         <span />
-        <BurgerMenu isActive={isBurgerActive} />
       </div>
     </>
   );

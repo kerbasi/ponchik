@@ -4,14 +4,26 @@ import { Burger } from "../../Components/Burger/Burger";
 import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
 import { Select } from "../../Components/Select/Select";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useMediaQuery from "../../utils/hooks/useMediaQuery";
+import { BurgerMenu } from "../../Components/BurgerMenu/BurgerMenu";
 
 export const Header = () => {
   const [isBurgerActive, setIsBurgerActive] = useState(false);
 
   const isTablet = useMediaQuery("(max-width: 950px)");
   const isMobile = useMediaQuery("(max-width: 650px)");
+
+  const handleScroll = () => {
+    setIsBurgerActive(false);
+    document.removeEventListener("scroll", handleScroll);
+  };
+
+  useEffect(() => {
+    if (isMobile && isBurgerActive) {
+      document.addEventListener("scroll", handleScroll);
+    }
+  }, [isBurgerActive]);
 
   const handleBurgerBtnClick = () => {
     setIsBurgerActive((prev) => !prev);
@@ -25,7 +37,7 @@ export const Header = () => {
             <img src={logo} alt='Логотип' />
           </NavLink>
         </div>
-        <Navigation />
+        {!isTablet && !isMobile && <Navigation />}
 
         <div className='header__icons'>
           <Select />
@@ -40,12 +52,15 @@ export const Header = () => {
             isBurgerActive={isBurgerActive}
           />
         )}
+        {isTablet && !isMobile && (
+          <>
+            <BurgerMenu isActive={isBurgerActive} />
+          </>
+        )}
         {isMobile && (
-          <Burger
-            handleBurgerBtnClick={handleBurgerBtnClick}
-            isBurgerActive={isBurgerActive}
-            isMobile={isMobile}
-          />
+          <>
+            <BurgerMenu isActive={isBurgerActive} isMobile={isMobile} />
+          </>
         )}
       </div>
     </header>

@@ -2,10 +2,8 @@
 import { NavLink } from "react-router-dom";
 
 export const BurgerMenu = ({ isActive }) => {
-  const className = isActive ? "burger-menu burger-menu_active" : "burger-menu";
-
   return (
-    <div className={className}>
+    <div className={`burger-menu ${isActive ? "burger-menu_active" : ""}`}>
       <NavLink
         to='/menu/donuts'
         className={({ isActive }) =>
@@ -30,6 +28,7 @@ export const BurgerMenu = ({ isActive }) => {
       >
         Контакты
       </NavLink>
+      <div className='burger-menu__overlay'></div>
     </div>
   );
 };
