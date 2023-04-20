@@ -10,6 +10,7 @@ import { BurgerMenu } from "../../Components/BurgerMenu/BurgerMenu";
 
 export const Header = () => {
   const [isBurgerActive, setIsBurgerActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   const isTablet = useMediaQuery("(max-width: 950px)");
   const isMobile = useMediaQuery("(max-width: 650px)");
@@ -27,6 +28,22 @@ export const Header = () => {
 
   const handleBurgerBtnClick = () => {
     setIsBurgerActive((prev) => !prev);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", isSticky);
+    console.log("test");
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
+  });
+
+  const isSticky = (e) => {
+    const header = document.querySelector(".header");
+    const scrollTop = window.scrollY;
+    scrollTop >= 500
+      ? header.classList.add("is-sticky")
+      : header.classList.remove("is-sticky");
   };
 
   return (
