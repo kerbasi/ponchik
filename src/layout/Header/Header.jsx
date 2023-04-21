@@ -10,41 +10,24 @@ import { BurgerMenu } from "../../Components/BurgerMenu/BurgerMenu";
 
 export const Header = () => {
   const [isBurgerActive, setIsBurgerActive] = useState(false);
-  const [isActive, setIsActive] = useState(false);
 
   const isTablet = useMediaQuery("(max-width: 950px)");
   const isMobile = useMediaQuery("(max-width: 650px)");
-
-  const handleScroll = () => {
-    setIsBurgerActive(false);
-    document.removeEventListener("scroll", handleScroll);
-  };
-
-  useEffect(() => {
-    if (isMobile && isBurgerActive) {
-      document.addEventListener("scroll", handleScroll);
-    }
-  }, [isBurgerActive]);
 
   const handleBurgerBtnClick = () => {
     setIsBurgerActive((prev) => !prev);
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", isSticky);
-    console.log("test");
-    return () => {
-      window.removeEventListener("scroll", isSticky);
-    };
-  });
-
-  const isSticky = (e) => {
-    const header = document.querySelector(".header");
-    const scrollTop = window.scrollY;
-    scrollTop >= 500
-      ? header.classList.add("is-sticky")
-      : header.classList.remove("is-sticky");
+  const handleScroll = () => {
+    setIsBurgerActive(false);
   };
+
+  useEffect(() => {
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className='header'>
@@ -64,19 +47,15 @@ export const Header = () => {
           />
         </div>
         {isTablet && (
-          <Burger
-            handleBurgerBtnClick={handleBurgerBtnClick}
-            isBurgerActive={isBurgerActive}
-          />
-        )}
-        {isTablet && !isMobile && (
           <>
-            <BurgerMenu isActive={isBurgerActive} />
-          </>
-        )}
-        {isMobile && (
-          <>
-            <BurgerMenu isActive={isBurgerActive} isMobile={isMobile} />
+            <Burger
+              handleBurgerBtnClick={handleBurgerBtnClick}
+              isBurgerActive={isBurgerActive}
+            />
+            <BurgerMenu
+              isActive={isBurgerActive}
+              setIsBurgerActive={setIsBurgerActive}
+            />
           </>
         )}
       </div>
