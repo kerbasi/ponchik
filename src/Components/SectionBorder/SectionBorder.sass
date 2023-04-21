@@ -1,4 +1,13 @@
 @import '../../Styles/@mixins'
+
+@keyframes sliding 
+    0%
+        transform: translateX(0)
+    50%
+        transform: translateX(-100vw)
+    100%
+        transform: translateX(-200vw)
+
 .first
     min-height: 80px
     display: flex
@@ -6,7 +15,7 @@
     padding: 0 268px
 
 .sectionBorder
-    width: 100%
+    width: 100vw
 
 .sectionBorder__block
     display: flex
@@ -54,7 +63,20 @@
     .sectionBorder__title
         @include heading-H3-mob
 
-    .sectionBorder
-        display: flex
-        flex-shrink: 0
-        gap: 50vw
+    .first
+        display: block
+        width: auto
+        white-space: nowrap
+        padding: 0
+        animation: sliding 10s 3s linear alternate infinite
+        
+    .sectionBorder__block
+        display: inline-block
+        width: 100vw
+        max-width: 100vw
+        text-align: center
+
+    .sectionBorder__img
+        margin: 0 auto
+
+    
