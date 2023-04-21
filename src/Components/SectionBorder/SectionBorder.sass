@@ -3,8 +3,12 @@
 @keyframes sliding 
     0%
         transform: translateX(0)
+    10%
+        transform: translateX(0)
     50%
         transform: translateX(-100vw)
+    90%
+        transform: translateX(-200vw)
     100%
         transform: translateX(-200vw)
 
@@ -68,7 +72,7 @@
         width: auto
         white-space: nowrap
         padding: 0
-        animation: sliding 10s 3s linear alternate infinite
+        animation: sliding 10s linear alternate infinite
         
     .sectionBorder__block
         display: inline-block
