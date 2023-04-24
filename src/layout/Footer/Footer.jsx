@@ -13,7 +13,7 @@ export const Footer = () => {
       <div className='footer__nav'>
         <Navigation footer='true' />
       </div>
-      <div className='footer__contacts'>
+      <div className='footer__contacts' id='contacts'>
         <a
           href='tel:2222222222222222222222222222222222222'
           className='footer__contacts-tel'
